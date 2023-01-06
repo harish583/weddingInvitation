@@ -85,13 +85,14 @@
         });
         console.log($videoSrc);
 
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
+        // $('#videoModal').on('shown.bs.modal', function (e) {
+        //     debugger;
+        //     $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        // })
 
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
+        // $('#videoModal').on('hide.bs.modal', function (e) {
+        //     $("#video").attr('src', $videoSrc);
+        // })
     });
 
 
@@ -121,7 +122,7 @@
         if(!e.target.dataset.filter){
             $(".first,.second").show();
             $('[data-filter]').removeClass("hover")
-        }debugger;})
+        }})
     $('[data-filter]').on("click",(e)=>{
         $(".first,.second").hide();
         $('[data-filter]').removeClass("hover")

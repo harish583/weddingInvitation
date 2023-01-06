@@ -9728,10 +9728,7 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 1;
 }
 
-.bg-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/0E5A8925.JPG), no-repeat center center;
-  background-size: cover;
-}
+
 
 .gallery-carousel .owl-nav {
   position: absolute;
@@ -9757,6 +9754,11 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 30px;
 }
 
+.bg-gallery {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/0E5A8532.JPG), no-repeat center center;
+  background-size: cover;
+}
+
 @media (max-width: 767.98px) {
   #event .border-right {
     border-right: none !important;
@@ -9764,6 +9766,11 @@ a.text-dark:hover, a.text-dark:focus {
   .bg-gallery{
     height: 70vw;
   }
+}
+@media (max-width: 575px) {
+#event{
+  margin-top: 200px;
+}
 }
 @media (min-width: 767.98px) {
   .carousel-item.position-relative {
