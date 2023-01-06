@@ -1,6 +1,55 @@
 (function ($) {
     "use strict";
 
+// // create config object: rootMargin and threshold
+// // are two properties exposed by the interface
+// const config = {
+//     rootMargin: '0px 0px 50px 0px',
+//     threshold: 0
+//   };
+  
+//   // register the config object with an instance
+//   // of intersectionObserver
+//   let observer = new IntersectionObserver(function(entries, self) {
+//     // iterate over each entry
+//     entries.forEach(entry => {
+//       // process just the images that are intersecting.
+//       // isIntersecting is a property exposed by the interface
+//       if(entry.isIntersecting) {
+//         // custom function that copies the path to the img
+//         // from data-src to src
+//         // preloadImage(entry.target);
+//         // the image is now in place, stop watching
+//         let lazyImage = entry.target;
+//           lazyImage.src = lazyImage.dataset.src;
+//           lazyImage.srcset = lazyImage.dataset.srcset;
+//           lazyImage.classList.remove("lazy");
+//           observer.unobserve(entry.target);
+//       }
+//     });
+//   }, config);
+
+// //   const imgs = document.querySelectorAll('[data-src]');
+// //   debugger;
+// // imgs.forEach(img => {
+// //   observer.observe(img);
+// // });
+
+// function myMap() {
+//     debugger;
+//     var rkpr1= {
+//       center:new google.maps.LatLng(51.508742,-0.120850),
+//       zoom:5,
+//     };
+//     var AmmaGarden1 = {
+//         center:new google.maps.LatLng(51.508742,-0.120850),
+//       zoom:5,
+//     }
+
+//     // var rkpr = new google.maps.Map(document.getElementById("rkpr"),rkpr1);
+//     // var AmmaGarden = new google.maps.Map(document.getElementById("AmmaGarden"),AmmaGarden1);
+
+//     }
     // Navbar on scrolling
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -57,18 +106,28 @@
 
 
     // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
+    // var portfolioIsotope = $('.portfolio-container').isotope({
+    //     itemSelector: '.portfolio-item',
+    //     layoutMode: 'fitRows'
+    // });
+    // $('#portfolio-flters li').on('click', function () {
+    //     $("#portfolio-flters li").removeClass('active');
+    //     $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
-    
-    
+    //     portfolioIsotope.isotope({filter: $(this).data('filter')});
+    // });
+    $(document).on("click",(e)=>{
+        
+        if(!e.target.dataset.filter){
+            $(".first,.second").show();
+            $('[data-filter]').removeClass("hover")
+        }debugger;})
+    $('[data-filter]').on("click",(e)=>{
+        $(".first,.second").hide();
+        $('[data-filter]').removeClass("hover")
+        e.target.classList.add("hover");
+        $(e.target.dataset.filter).show();
+    })
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {

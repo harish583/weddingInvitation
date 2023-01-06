@@ -9761,4 +9761,20 @@ a.text-dark:hover, a.text-dark:focus {
   #event .border-right {
     border-right: none !important;
   }
+  .bg-gallery{
+    height: 70vw;
+  }
+}
+@media (min-width: 767.98px) {
+  .carousel-item.position-relative {
+    height: 100vh; 
+  }
+  .bg-gallery .position-relative{
+    margin-bottom: 280px;
+  }
+}
+[data-filter].hover{
+  color: #fff;
+    background-color: #E47A2E;
+    border-color: #E47A2E;
 }
