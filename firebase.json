@@ -1,6 +1,7 @@
 {
-  "hosting": {"site": "kyathamswedding",
-    "public": "n",
+  "hosting": {
+    "site": "harishwedsnandini",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

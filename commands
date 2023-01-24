@@ -1,0 +1,3 @@
+firebase deploy --only hosting:harishwedsnandini
+
+https://harishwedsnandini.web.app/
