@@ -59,7 +59,14 @@
         }
     });
 
-
+$(".btn-play.mx-auto").on("click",(e)=>{
+    debugger;
+    // $("#video").src= e.currentTarget.getAttribute("src");
+    $("#video").attr("src",e.currentTarget.getAttribute("src"));
+})
+$(".close").on("click",()=>{
+    $("#video").attr("src","");
+})
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
